@@ -1,8 +1,6 @@
-// server/api/analyze.post.ts
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export default defineEventHandler(async (event) => {
-    // 1. Ambil Config & Inisialisasi Gemini
     const config = useRuntimeConfig();
 
     if (!config.GEMINI_API_KEY) {
@@ -11,10 +9,8 @@ export default defineEventHandler(async (event) => {
 
     const genAI = new GoogleGenerativeAI(config.GEMINI_API_KEY);
 
-    // Gunakan model Flash agar cepat & hemat
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    // 2. Baca Body Request (Gambar dikirim dalam format Base64)
     const body = await readBody(event);
     const { imageBase64 } = body;
 
@@ -23,8 +19,6 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // 3. Prompt Engineering (Instruksi Khusus EcoLens)
-        // Kita minta output JSON murni agar mudah diolah di Frontend
         const prompt = `
             Kamu adalah EcoLens, asisten AI ahli lingkungan.
 
