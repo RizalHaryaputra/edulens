@@ -40,7 +40,7 @@
                         <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
 
                             <button @click="scrollToScan"
-                                class="w-full sm:w-auto px-8 py-4 bg-eco-500 hover:bg-eco-400 text-dark-950 font-bold rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform hover:-translate-y-1">
+                                class="w-full sm:w-auto px-8 py-4 bg-eco-500 hover:bg-eco-400 text-dark-950 font-bold rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform">
                                 Mulai Scan Sekarang
                             </button>
 
@@ -144,13 +144,13 @@
         </section>
 
         <!-- How It Works Section -->
-        <section class="py-24 bg-dark-950 relative overflow-hidden px-2 lg:px-16">
+        <section class="py-24 bg-dark-950 relative px-2 lg:px-16">
+
             <div
                 class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] opacity-20">
             </div>
 
             <div class="container mx-auto px-6 relative z-10">
-
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
                         Cara Kerja <span
@@ -163,13 +163,11 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-
                     <div
                         class="group p-8 rounded-3xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-eco-500/30 transition-all duration-300 relative overflow-hidden">
                         <div
                             class="absolute -right-10 -top-10 w-32 h-32 bg-eco-500/10 rounded-full blur-3xl group-hover:bg-eco-500/20 transition-all">
                         </div>
-
                         <div
                             class="w-14 h-14 rounded-2xl bg-dark-950 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-eco-500/50 transition-transform duration-300 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-eco-400" viewBox="0 0 24 24"
@@ -180,14 +178,10 @@
                                 <circle cx="12" cy="13" r="3" />
                             </svg>
                         </div>
-
-                        <h3 class="text-xltext-xl font-bold text-white mb-3 group-hover:text-eco-400 transition-colors">
-                            1. Foto
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-eco-400 transition-colors">1. Foto
                             & Upload</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Ambil foto sampah di sekitarmu atau upload gambar dari galeri. Sistem kami menerima berbagai
-                            format gambar.
-                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Ambil foto sampah di sekitarmu atau upload
+                            gambar dari galeri.</p>
                     </div>
 
                     <div
@@ -195,23 +189,22 @@
                         <div
                             class="absolute -right-10 -top-10 w-32 h-32 bg-eco-500/10 rounded-full blur-3xl group-hover:bg-eco-500/20 transition-all">
                         </div>
-
                         <div
                             class="w-14 h-14 rounded-2xl bg-dark-950 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-eco-500/50 transition-transform duration-300 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-eco-400" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                                <path
+                                    d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
+                                <path d="M9.5 9h.01" />
+                                <path d="M14.5 9h.01" />
                             </svg>
                         </div>
-
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-eco-400 transition-colors">2.
                             Analisis AI</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Gemini AI akan memindai gambar, mengenali material (plastik, kertas, B3), dan menentukan
-                            kategori sampah.
-                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Gemini AI akan memindai gambar dan mengenali
+                            material sampah.</p>
                     </div>
 
                     <div
@@ -219,7 +212,6 @@
                         <div
                             class="absolute -right-10 -top-10 w-32 h-32 bg-eco-500/10 rounded-full blur-3xl group-hover:bg-eco-500/20 transition-all">
                         </div>
-
                         <div
                             class="w-14 h-14 rounded-2xl bg-dark-950 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-eco-500/50 transition-transform duration-300 shadow-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-eco-400" viewBox="0 0 24 24"
@@ -230,25 +222,21 @@
                                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
                             </svg>
                         </div>
-
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-eco-400 transition-colors">3.
                             Solusi & Edukasi</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Dapatkan panduan cara mengolahnya, info nilai jual, dan artikel edukasi terkait dampak
-                            lingkungannya.
-                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Dapatkan panduan cara mengolahnya dan info
+                            nilai jual.</p>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Feture Section -->
         <section class="py-24 bg-dark-950 relative px-2 lg:px-16">
-            <div class="absolute top-1/4 left-0 w-64 h-64 bg-eco-600/10 rounded-full blur-[100px] -z-10"></div>
 
-            <div class="container mx-auto px-6">
-
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-eco-500/20 opacity-75 rounded-[100%] blur-[100px] pointer-events-none z-0">
+            </div>
+            <div class="container mx-auto px-6 z-10 relative">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div class="max-w-xl text-center md:text-left">
                         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -261,14 +249,12 @@
                             memahami dan mengelola limbah dengan lebih baik.
                         </p>
                     </div>
-
                     <div
                         class="hidden md:block h-px flex-grow bg-gradient-to-r from-eco-500/50 to-transparent ml-12 mb-8">
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
                     <div
                         class="group p-6 rounded-2xl bg-dark-900 border border-white/5 hover:border-eco-500/50 hover:bg-dark-900/80 transition-all duration-300">
                         <div
@@ -284,10 +270,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Deteksi Sampah AI</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Teknologi Computer Vision yang mampu mengenali berbagai jenis limbah rumah tangga secara
-                            instan.
-                        </p>
+                        <p class="text-sm text-slate-400 leading-relaxed">Teknologi Computer Vision yang mampu mengenali
+                            berbagai jenis limbah.</p>
                     </div>
 
                     <div
@@ -302,10 +286,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Chatbot Interaktif</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Asisten virtual pintar yang siap menjawab pertanyaanmu seputar daur ulang dan isu lingkungan
-                            24/7.
-                        </p>
+                        <p class="text-sm text-slate-400 leading-relaxed">Asisten virtual pintar yang siap menjawab
+                            pertanyaanmu seputar daur ulang.</p>
                     </div>
 
                     <div
@@ -320,9 +302,8 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Artikel Edukasi</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Kumpulan artikel dan panduan praktis untuk meningkatkan wawasan tentang pelestarian alam.
-                        </p>
+                        <p class="text-sm text-slate-400 leading-relaxed">Kumpulan artikel dan panduan praktis untuk
+                            meningkatkan wawasan.</p>
                     </div>
 
                     <div
@@ -339,17 +320,19 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2">Sistem Klasifikasi</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Pengelompokan otomatis (Organik, Anorganik, B3) untuk memudahkan proses pemilahan sampah.
-                        </p>
+                        <p class="text-sm text-slate-400 leading-relaxed">Pengelompokan otomatis (Organik, Anorganik,
+                            B3) untuk pemilahan sampah.</p>
                     </div>
-
                 </div>
+
             </div>
         </section>
 
         <!-- Article Section -->
         <section class="py-24 bg-dark-950 relative px-2 lg:px-16">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-eco-500/20 opacity-75 rounded-[100%] blur-[100px] pointer-events-none z-0">
+            </div>
             <div class="container mx-auto px-6">
 
                 <div class="text-center max-w-2xl mx-auto mb-16">
@@ -365,7 +348,7 @@
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid lg:grid-cols-3 gap-8">
 
                     <article
                         class="group bg-dark-900 border border-white/5 rounded-2xl overflow-hidden hover:border-eco-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)]">
@@ -480,12 +463,11 @@
                             </NuxtLink>
                         </div>
                     </article>
-
                 </div>
 
-                <div class="mt-8 text-center">
+                <div class="mt-12 text-center w-full">
                     <NuxtLink to="/blog"
-                        class="inline-flex px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:text-eco-400 hover:bg-white/10 backdrop-blur-md transition-all hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        class="block md:inline w-full sm:w-auto px-8 py-5 bg-eco-500 hover:bg-eco-400 text-dark-950 font-bold rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform">
                         Lihat Semua Artikel
                     </NuxtLink>
                 </div>
@@ -494,7 +476,11 @@
         </section>
 
         <!-- Chatbot Preview Section -->
-        <section class="py-24 px-2 lg:px-16 bg-dark-950 relative overflow-hidden">
+        <section class="py-24 px-2 lg:px-16 bg-dark-950 relative">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-eco-500/20 opacity-75 rounded-[100%] blur-[100px] pointer-events-none z-0">
+            </div>
+
             <div
                 class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-eco-500/5 rounded-full blur-[120px] pointer-events-none">
             </div>
@@ -658,14 +644,8 @@
                         </ul>
 
                         <button
-                            class="px-8 py-4 bg-white/5 border border-white/10 hover:bg-eco-500 hover:text-dark-950 hover:border-transparent text-white font-bold rounded-2xl transition-all duration-300 flex items-center gap-3 group">
-                            Chat dengan EcoBot
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                            </svg>
+                            class="w-full sm:w-auto px-8 py-4 bg-eco-500 hover:bg-eco-400 text-dark-950 font-bold rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform">
+                            Chat dengan EcoBot AI
                         </button>
                     </div>
 
@@ -678,7 +658,7 @@
             <div class="container mx-auto px-6 relative z-10">
 
                 <div
-                    class="relative rounded-[3rem] overflow-hidden bg-dark-950/50 border border-eco-600 border-opacity-40 p-12 md:p-20 text-center">
+                    class="relative rounded-[3rem] overflow-hidden bg-dark-950/50 border border-eco-600 border-opacity-40 p-10 md:p-20 text-center">
 
                     <div
                         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-eco-600/60 via-eco-500/60 to-teal-500/50 rounded-full blur-[120px] opacity-80 -z-0">
@@ -693,11 +673,11 @@
                         <button @click="scrollToScan"
                             class="group inline-flex items-center justify-center px-10 py-4 text-md md:text-lg font-bold text-white bg-gradient-to-r from-eco-500 to-teal-500 rounded-full shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_50px_rgba(34,197,94,0.5)] transition-all duration-300 hover:scale-105">
                             <span class="flex items-center gap-3">
-                                Scan Sampah Sekarang
+                                Scan Sekarang
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-6 h-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
+                                    class="w-6 h-6 group-hover:translate-x-1 transition-transform hidden md:block"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14" />
                                     <path d="m12 5 7 7-7 7" />
                                 </svg>
