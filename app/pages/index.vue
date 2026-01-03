@@ -1,11 +1,4 @@
 <script setup>
-const scrollToScan = () => {
-    const el = document.getElementById('scan-area');
-    if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-};
-
 const steps = [
     {
         title: "1. Foto & Upload",
@@ -68,42 +61,8 @@ const features = [
     }
 ];
 
-const articles = [
-    {
-        image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=600&auto=format&fit=crop",
-        category: "Daur Ulang",
-        date: "12 Jan 2026",
-        readTime: "5 Menit Baca",
-        title: "Bahaya Mikroplastik bagi Ekosistem Laut",
-        description: "Mikroplastik kini ditemukan di hampir seluruh bagian laut. Pelajari dampaknya bagi biota laut dan kesehatan manusia.",
-        link: "/blog/mikroplastik",
-        // Warna Hijau (Default Eco)
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&auto=format&fit=crop&q=60",
-        category: "Panduan",
-        date: "10 Jan 2026",
-        readTime: "7 Menit Baca",
-        title: "Cara Membuat Kompos dari Sampah Dapur",
-        description: "Jangan buang sisa sayuranmu! Ubah sampah organik rumah tangga menjadi pupuk subur dengan metode sederhana ini.",
-        link: "/blog/kompos",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=600&auto=format&fit=crop",
-        category: "Gaya Hidup",
-        date: "08 Jan 2026",
-        readTime: "4 Menit Baca",
-        title: "Tips Memulai Hidup Minim Sampah (Zero Waste)",
-        description: "Langkah-langkah kecil untuk mengurangi produksi sampah harianmu, mulai dari menolak kantong plastik.",
-        link: "/blog/zero-waste",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    }
-];
+const { articles: allArticles } = useArticles();
+const articles = computed(() => allArticles.slice(0, 3));
 </script>
 
 <template>
@@ -341,7 +300,7 @@ const articles = [
 
                 <div class="grid md:grid-cols-3 gap-8">
 
-                    <ArticleCard v-for="(article, index) in articles" :key="index" :image="article.image"
+                    <ArticleCard v-for="(article, index) in articles" :key="index" :slug="article.slug" :image="article.image"
                         :category="article.category" :date="article.date" :readTime="article.readTime"
                         :title="article.title" :description="article.description" :link="article.link"
                         :accent-color="article.accentColor" :hover-color="article.hoverColor" />

@@ -24,7 +24,7 @@
                 {{ description }}
             </p>
 
-            <NuxtLink :to="link"
+            <NuxtLink :to="'/blog/' + slug"
                 class="inline-flex items-center gap-2 text-sm font-medium text-white transition-colors mt-auto"
                 :class="hoverColor">
                 Baca Selengkapnya
@@ -39,6 +39,8 @@
 </template>
 
 <script setup>
+import Slug from '~/pages/blog/[slug].vue';
+
 defineProps({
     image: String,
     category: String,
@@ -47,7 +49,8 @@ defineProps({
     title: String,
     description: String,
     link: String,
-    // Props untuk warna (Agar bisa beda-beda: Hijau, Biru, Ungu)
+    slug: String,
+    
     accentColor: {
         type: String,
         default: 'text-eco-400'
