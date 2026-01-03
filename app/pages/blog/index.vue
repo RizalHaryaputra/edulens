@@ -26,7 +26,7 @@
             <div
                 class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 bg-dark-900/50 p-4 rounded-2xl border border-white/5 backdrop-blur-md">
 
-                <div class="relative w-full lg:w-80">
+                <div class="relative w-full lg:w-1/2">
                     <!-- <div class="absolute left-8">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-500" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -98,114 +98,14 @@
 </template>
 
 <script setup>
-// State untuk Search & Filter
 const searchQuery = ref('');
 const selectedCategory = ref('Semua');
 const currentPage = ref(1);
 const itemsPerPage = 6;
 
-// Daftar Kategori
 const categories = ['Semua', 'Daur Ulang', 'Panduan', 'Gaya Hidup', 'Teknologi'];
 
-// MOCK DATA ARTIKEL (Min 8 item biar pagination kelihatan)
-const articles = [
-    {
-        id: 1,
-        image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=600&auto=format&fit=crop",
-        category: "Daur Ulang",
-        date: "12 Jan 2026",
-        readTime: "5 Menit Baca",
-        title: "Bahaya Mikroplastik bagi Ekosistem Laut",
-        description: "Mikroplastik kini ditemukan di hampir seluruh bagian laut. Pelajari dampaknya bagi biota laut dan kesehatan manusia.",
-        link: "/blog/mikroplastik",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 2,
-        image: "https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=600&auto=format&fit=crop",
-        category: "Panduan",
-        date: "10 Jan 2026",
-        readTime: "7 Menit Baca",
-        title: "Cara Membuat Kompos dari Sampah Dapur",
-        description: "Jangan buang sisa sayuranmu! Ubah sampah organik rumah tangga menjadi pupuk subur dengan metode sederhana.",
-        link: "/blog/kompos",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 3,
-        image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&auto=format&fit=crop",
-        category: "Gaya Hidup",
-        date: "08 Jan 2026",
-        readTime: "4 Menit Baca",
-        title: "Tips Memulai Hidup Minim Sampah (Zero Waste)",
-        description: "Langkah-langkah kecil untuk mengurangi produksi sampah harianmu, mulai dari menolak kantong plastik.",
-        link: "/blog/zero-waste",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 4,
-        image: "https://images.unsplash.com/photo-1512418490979-92798cec1380?w=600&auto=format&fit=crop",
-        category: "Teknologi",
-        date: "05 Jan 2026",
-        readTime: "6 Menit Baca",
-        title: "Inovasi AI dalam Pengelolaan Sampah Kota",
-        description: "Bagaimana kota-kota pintar menggunakan kecerdasan buatan untuk mengoptimalkan rute truk sampah dan pemilahan.",
-        link: "/blog/ai-sampah",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 5,
-        image: "https://images.unsplash.com/photo-1591193686104-fddba4d0e4d8?w=600&auto=format&fit=crop",
-        category: "Daur Ulang",
-        date: "02 Jan 2026",
-        readTime: "5 Menit Baca",
-        title: "Mengenal Kode Daur Ulang Plastik (1-7)",
-        description: "Jangan salah pilah! Pahami arti simbol segitiga angka pada kemasan plastik agar proses daur ulang efektif.",
-        link: "/blog/kode-plastik",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 6,
-        image: "https://images.unsplash.com/photo-1598737944400-f3fe63b9f32e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fHBsYXN0aWN8ZW58MHx8MHx8fDA%3D",
-        category: "Gaya Hidup",
-        date: "28 Des 2025",
-        readTime: "3 Menit Baca",
-        title: "Pengganti Plastik Sekali Pakai yang Stylish",
-        description: "Tampil keren sambil menjaga bumi dengan rekomendasi produk reusable yang awet dan fungsional.",
-        link: "/blog/reusable-items",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 7,
-        image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=600&auto=format&fit=crop",
-        category: "Panduan",
-        date: "20 Des 2025",
-        readTime: "8 Menit Baca",
-        title: "Membuat Ecobrick dari Botol Bekas",
-        description: "Solusi kreatif untuk sampah plastik yang tidak bisa didaur ulang. Ubah botol bekas menjadi material bangunan.",
-        link: "/blog/ecobrick",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-    {
-        id: 8,
-        image: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=600&auto=format&fit=crop",
-        category: "Gaya Hidup",
-        date: "15 Des 2025",
-        readTime: "5 Menit Baca",
-        title: "Minimalisme Digital: Bersihkan Sampah Elektronik",
-        description: "Bukan hanya fisik, sampah digital juga memakan energi. Pelajari cara membersihkan jejak karbon digitalmu.",
-        link: "/blog/digital-waste",
-        accentColor: "text-eco-400",
-        hoverColor: "group-hover:text-eco-400 hover:text-eco-400"
-    },
-];
+const { articles } = useArticles(); 
 
 // --- LOGIC FILTERING & PAGINATION ---
 
