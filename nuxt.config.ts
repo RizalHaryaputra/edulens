@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     }
   },
 
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   // css: ['~/assets/css/main.css'],
   // (Opsional) Konfigurasi Tailwind agar scan file content
   // tailwindcss: {
