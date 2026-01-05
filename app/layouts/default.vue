@@ -11,17 +11,8 @@
             <div class="container mx-auto px-6 h-20 flex items-center justify-between">
 
                 <NuxtLink to="/" class="flex items-center gap-3 group z-50">
-                    <div
-                        class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-eco-600 to-eco-400 shadow-[0_0_15px_rgba(74,222,128,0.3)] group-hover:shadow-[0_0_25px_rgba(74,222,128,0.5)] transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-dark-950" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M7 20h10" />
-                            <path d="M10 20c5.5-2.5.8-6.4 3-10" />
-                            <path
-                                d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.2.4-4.8-.3-1.1-.6-2.3-1.9-3.3-2.4 1.9-3.2 2.6-7.9 2.8-10.4 2.5 0 7.1.6 10.2 2.9-.4 1-.6 2-.6 3.3 0 2.4.1 4.3 1 6.4 1 2.3 2.4 2 2.4 2 1.4 3.2.3 7.5-5 10.4-3.5 1.9-7.3 1.9-7.3 1.9z" />
-                        </svg>
-                    </div>
+                    
+                    <img src="/images/ecolens.png" alt="Edulens Logo" class="w-10 h-10 rounded-lg shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]" />
                     <span
                         class="text-xl font-bold tracking-tight text-white group-hover:text-eco-400 transition-colors">
                         EcoLens

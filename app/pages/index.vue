@@ -1,4 +1,11 @@
 <script setup>
+useHead({
+    title: 'EcoLens',
+    meta: [
+        { name: 'description', content: 'EcoLens adalah platform deteksi sampah menggunakan AI untuk membantu daur ulang dan edukasi lingkungan.' }
+    ]
+})
+
 const steps = [
     {
         title: "1. Foto & Upload",
@@ -116,7 +123,7 @@ const articles = computed(() => allArticles.slice(0, 3));
                             </NuxtLink>
                         </div>
 
-                        <div
+                        <!-- <div
                             class="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center gap-4 text-slate-500 text-sm justify-center lg:justify-start">
                             <span>Didukung teknologi dari:</span>
                             <div
@@ -127,7 +134,7 @@ const articles = computed(() => allArticles.slice(0, 3));
                                 <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
                                 <span class="font-bold text-white">Nuxt 3</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="relative hidden lg:block">
@@ -493,7 +500,7 @@ const articles = computed(() => allArticles.slice(0, 3));
             <div class="container mx-auto px-6 relative z-10">
 
                 <div
-                    class="relative rounded-[3rem] overflow-hidden bg-dark-950/50 border border-eco-600 border-opacity-40 p-10 md:p-20 text-center">
+                    class="relative rounded-3xl overflow-hidden bg-dark-950/50 border border-eco-600 border-opacity-40 p-10 md:p-20 text-center">
 
                     <div
                         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-eco-600/60 via-eco-500/60 to-teal-500/50 rounded-full blur-[120px] opacity-80 -z-0">

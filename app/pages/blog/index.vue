@@ -19,7 +19,8 @@
                         class="text-transparent bg-clip-text bg-gradient-to-r from-eco-400 to-teal-400">Lingkungan</span>
                 </h1>
                 <p class="text-slate-400 text-lg">
-                    Temukan panduan daur ulang, tips gaya hidup zero-waste, dan inovasi teknologi hijau menarik dan terkini di sini.
+                    Temukan panduan daur ulang, tips gaya hidup zero-waste, dan inovasi teknologi hijau menarik dan
+                    terkini di sini.
                 </p>
             </div>
 
@@ -39,7 +40,8 @@
                         class="w-full py-2.5 px-4 bg-dark-950 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-eco-500/50 focus:ring-1 focus:ring-eco-500/50 transition-all"
                         @input="currentPage = 1" />
                 </div>
-                <div class="flex flex-wrap justify-center lg:justify-end gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
+                <div
+                    class="flex flex-wrap justify-center lg:justify-end gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
                     <button v-for="cat in categories" :key="cat" @click="selectedCategory = cat; currentPage = 1"
                         :class="[
                             'px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all border',
@@ -58,7 +60,15 @@
             </div>
 
             <div v-else class="text-center py-20 bg-white/5 rounded-3xl border border-white/5 border-dashed">
-                <div class="text-4xl mb-4">🔍</div>
+                <div class="flex items-center justify-center text-center mb-6 ">
+                    <div class="rounded-full bg-eco-500/20 border border-eco-500/30 w-16 h-16 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8 text-eco-400">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </div>
+                </div>
                 <h3 class="text-xl font-bold text-white mb-2">Artikel tidak ditemukan</h3>
                 <p class="text-slate-400">Coba gunakan kata kunci lain atau ubah filter kategori.</p>
                 <button @click="resetFilters" class="mt-6 text-eco-400 hover:text-eco-300 font-medium underline">
@@ -105,7 +115,7 @@ const itemsPerPage = 6;
 
 const categories = ['Semua', 'Daur Ulang', 'Panduan', 'Gaya Hidup', 'Teknologi'];
 
-const { articles } = useArticles(); 
+const { articles } = useArticles();
 
 // --- LOGIC FILTERING & PAGINATION ---
 

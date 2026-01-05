@@ -1,6 +1,25 @@
 <script setup>
 // Import custom css
 import '~/assets/css/main.css'
+
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/images/ecolens.png'
+    }
+  ]
+})
+
+useSeoMeta({
+  title: 'EcoLens',
+  ogTitle: 'EcoLens - Deteksi Sampah dengan AI',
+  description: 'Ubah cara kamu memilah sampah dengan kecerdasan buatan. Scan sampahmu sekarang dan selamatkan bumi!',
+  ogDescription: 'Ubah cara kamu memilah sampah dengan kecerdasan buatan. Scan sampahmu sekarang dan selamatkan bumi!',
+  ogImage: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVjeWNsZXxlbnwwfHwwfHx8MA%3D%3D', // Ganti dengan gambar preview aplikasimu nanti
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
@@ -8,6 +27,8 @@ import '~/assets/css/main.css'
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+
 
 <style>
 /* === MODERN PAGE TRANSITION (Blur & Slide) === */
@@ -32,5 +53,4 @@ import '~/assets/css/main.css'
 html {
   overflow-y: scroll;
 }
-
 </style>
