@@ -29,7 +29,7 @@ EcoLens adalah aplikasi web progresif yang menggabungkan **Kecerdasan Buatan (AI
 
 1.  **Clone Repository**
     ```bash
-    git clone [https://github.com/rizalharyaputra/ecolens.git](https://github.com/rizalharyaputra/ecolens.git)
+    git clone https://github.com/rizalharyaputra/ecolens.git
     cd ecolens
     ```
 
